@@ -18,10 +18,10 @@ class Battlesnake(object):
         # TIP: If you open your Battlesnake URL in browser you should see this data
         return {
             "apiversion": "1",
-            "author": "",  # TODO: Your Battlesnake Username
-            "color": "#888888",  # TODO: Personalize
-            "head": "default",  # TODO: Personalize
-            "tail": "default",  # TODO: Personalize
+            "author": "Snakinator",
+            "color": "#999999",
+            "head": "pixel",
+            "tail": "pixel",
         }
 
     @cherrypy.expose
@@ -46,7 +46,8 @@ class Battlesnake(object):
 
         # Choose a random direction to move in
         possible_moves = ["up", "down", "left", "right"]
-        move = random.choice(possible_moves)
+        # move = random.choice(possible_moves)
+        move = "up"
 
         print(f"MOVE: {move}")
         return {"move": move}
